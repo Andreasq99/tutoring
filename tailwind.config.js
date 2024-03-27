@@ -1,9 +1,11 @@
+const {nextui} = require("@nextui-org/react");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}"
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
@@ -21,5 +23,6 @@ module.exports = {
       'header': { DEFAULT: '#bc4749', 100: '#260e0e', 200: '#4c1c1c', 300: '#73292b', 400: '#993739', 500: '#bc4749', 600: '#ca6c6e', 700: '#d79192', 800: '#e5b6b6', 900: '#f2dadb' } 
     },
   },
-  plugins: [],
+  darkMode: 'class',
+  plugins: [nextui()],
 };
